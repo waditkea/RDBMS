@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GET</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Year</th>
+        <th>Action_DELETE</th>
+        <th>Action_PUT</th>
+    </tr>
+    {% for people in user_details%}
+    <tr>
+        <td>{{people.id}}</td>
+        <td>{{people.name}}</td>
+        <td>{{people.address}}</td>
+        <td>{{people.year}}</td>
+        <td><a href="/delete/{{people.id}}">DELETE</a></td>
+        <td><a href="/PUT/{{people.id}}">PUT</a></td>
+    </tr>
+    {% endfor %}
+    <tr>
+        <td> <a href="/POST">POST</a>
+        </td>
+    </tr>
+
+</table>
+
+</body>
+</html>
