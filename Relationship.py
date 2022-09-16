@@ -23,6 +23,7 @@ class actors(db.Model):#one to one relationship
 
 
     def __repr__(self):
+        """hi"""
         if self.adhar_actor:
             adhar_actor=self.adhar_actor.__repr__()
         else:
